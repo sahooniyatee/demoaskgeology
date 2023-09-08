@@ -73,8 +73,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatSnackBarModule,
-    NgImageSliderModule
+    MatSnackBarModule
 
     // MatCarouselModule.forRoot()
   ],
