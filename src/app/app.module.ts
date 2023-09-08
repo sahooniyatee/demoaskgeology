@@ -34,7 +34,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { KnowmorwContentComponent } from './cource/knowmorw-content/knowmorw-content.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { NgImageSliderModule } from 'ng-image-slider';
 @NgModule({
   declarations: [
     AppComponent,
