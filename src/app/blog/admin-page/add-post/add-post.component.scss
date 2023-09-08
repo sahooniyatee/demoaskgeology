@@ -1,0 +1,34 @@
+.container{
+    margin: 3rem;
+}
+.example-form{
+
+    padding: 0 3rem 0 3rem;
+}
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row2{
+    width: 50%;
+}
+.rowNo2{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+.row3{
+    width: 100%;
+}
+.upload{
+    border: 1px dotted gray;
+    img{
+        height: 200px;
+        width: 200px;
+        opacity: 0.6;
+    }
+}
+.mat-mdc-tab-body-content {
+    height: 100%;
+    overflow: hidden !important;
+}

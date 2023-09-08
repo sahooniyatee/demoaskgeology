@@ -1,0 +1,45 @@
+.main_container{
+    margin-top: 5rem;
+}
+.font{
+    font-family: "Poppins", sans-serif;
+}
+.navbar{
+	height:70px
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: -5.2rem;
+    /* padding: 3rem; */
+    /* margin: 5rem 0 2rem 5rem; */
+    line-height: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+h1{
+font-size: 40px;
+    /* font-family: popins sans-serif; */
+    font-family: cursive;
+}
+span{
+    margin-left: 10rem;
+    opacity: 0.6;
+}
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    margin-top: -2rem;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 85rem;
+
+}
+.mat-mdc-tab-body-content {
+    height: 100%;
+    overflow: hidden !important;
+}

@@ -1,0 +1,47 @@
+<!-- <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile colspan="4" rowspan="1"> -->
+        <div class="container">
+        <div class="name">
+        <form class="example-form">
+            <mat-form-field class="example-full-width row1" appearance="outline">
+              <mat-label>Enter Post Heading</mat-label>
+              <input type="text" matInput [formControl]="NameFormControl" placeholder="Type Here....." >
+              <mat-error *ngIf="NameFormControl.hasError('Name') && !NameFormControl.hasError('required')">
+                Please enter a valid Name address
+              </mat-error>
+              <mat-error *ngIf="NameFormControl.hasError('required')">
+                Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <div class="rowNo2">
+            <mat-form-field appearance="outline" class="row2">
+                <mat-label>Add Sub-title</mat-label>
+                <input matInput type="text" placeholder="Enter Your Post Sub title">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="row2">
+                <mat-label>Choose a date</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="rowNo3">
+            <mat-form-field appearance="outline" class="row3">
+                <mat-label>Enter Your Content Here</mat-label>
+                <textarea matInput></textarea>
+              </mat-form-field>
+        </div>
+        <div class="rowNo4">
+          <!-- <input type="file" (change)="onFileSelected($event)" accept="image/*"> -->
+          <div class="upload" (change)="onFileSelected($event)">
+            <img src="../../../../assets/preview.png">
+            <span>upload any images,files,pdf</span>
+          </div>
+        </div>
+          </form>
+        </div>
+        </div>
+          
+    <!-- </mat-grid-tile>
+</mat-grid-list> -->

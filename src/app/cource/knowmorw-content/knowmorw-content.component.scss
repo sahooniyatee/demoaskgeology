@@ -1,0 +1,15 @@
+mat-card{
+    mat-card-actions{
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        height: 45px;
+        width: 100%;
+        // background-color: linear-gradient(to right, #009688, rgb(99, 208, 244));
+        background: linear-gradient(to right, #12efda, rgb(99, 208, 244));
+        width: 500px;
+        border: navajowhite;
+        border-radius: 5px;
+    }
+}

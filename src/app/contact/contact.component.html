@@ -1,0 +1,66 @@
+<div class="mainContainer">
+ <div style="justify-content:center ;"><h1 style="display: flex;justify-content: center;align-items: center;">Contact Us</h1></div> 
+  
+    <div class="container">
+      <div class="form">
+        <form class="example-form" [formGroup]="selfSignup" >
+            <div class="formSection">
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Enter your Full Name" type="text" formControlName="name">
+              <mat-error *ngIf="selfSignup.get('name')?.invalid && selfSignup.get('name')?.touched">
+                <span style="color: red;">Name must be requied you also put your short nick name 🥰</span>
+              </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Enter your Email" type="email" formControlName="emailId">
+                <mat-error *ngIf="selfSignup.get('emailId')?.touched">
+                  
+                <span style="color: red;">Email must be requied 📧</span>
+                </mat-error>
+                <mat-error *ngIf="selfSignup.get('emailId')?.hasError('requied')">
+                  
+                  <span style="color: red;">Email must be requied 📧</span>
+                  </mat-error>
+                  <mat-error *ngIf="selfSignup.get('emailId')?.hasError('pattern')">
+                    <span style="color: red;">Eamil should a proper pattern</span>
+                  </mat-error>
+            </mat-form-field>
+        <!-- </div> -->
+        <!-- <div style="display: flex; gap: 2rem;"> -->
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Enter your Phone Number" type="number" formControlName="mobileno">
+            <mat-error *ngIf="selfSignup.get('mobileno')?.touched && selfSignup.get('mobileno')?.invalid">
+              <span style="color: red;">Phone number must be required</span>
+            </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>choose a course</mat-label>
+                <mat-select [formControl]="toppings" multiple>
+                  <mat-select-trigger>
+                    {{toppings.value?.[0] || ''}}
+                    <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+                      (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                  </mat-select-trigger>
+                  <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="toppings?.hasError('required') || toppings?.invalid">
+                  <span style="color: red;">course must be selected</span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div>
+            <button class="slide_from_right customBTN btn prmColor" mat-raised-button type="button"  style="width: 50%; margin-left: 25%; " (click)="sendEmail()" [disabled]="selfSignup.invalid">Submit</button>
+          </div>
+        </form>
+    </div>
+        <div class="get_in_touch">
+          <img src="../../assets/Get in touch.gif" alt="">
+        </div>
+        
+    </div>
+</div>

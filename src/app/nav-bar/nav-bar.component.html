@@ -1,0 +1,90 @@
+<!-- navbar.component.html -->
+<div class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPrmOHGfbc3l5zvI_DF7ljH7wwDTlK_KgWsBWqlRmjY84SRs2KnM-3_WWdkPEXZJRMBNs&usqp=CAU"
+        alt="logo"
+        routerLink="/home"
+      />
+      <a routerLink="/home"> AskGeology</a>
+    </div>
+    <div class="nav_items">
+      <div class="humburger" (click)="sidenav()">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="menu"
+          matTooltip="Sections"
+        ></mat-icon>
+      </div>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/course">Our Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="contact-link" routerLink="/contact">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <div class="search-container navbar-search">
+            <input type="text" class="search-input" placeholder="Search" />
+            <mat-icon
+              aria-hidden="false"
+              aria-label="Example home icon"
+              fontIcon="search"
+              (click)="showSearchInput()"
+              style="cursor: pointer"
+              [ngClass]="{ search: search }"
+            >
+              <button class="search-button">Search</button>
+            </mat-icon>
+          </div>
+        </li>
+      </ul>
+
+      <div class="drawerOpen" [ngClass]="{ drawer: mat_drawer }">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/course">Our Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="contact-link" routerLink="/contact">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <div class="search-container navbar-search">
+              <input type="text" class="search-input" placeholder="Search" />
+              <mat-icon
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="search"
+                (click)="showSearchInput()"
+                style="cursor: pointer"
+                [ngClass]="{ search: search }"
+              >
+                <button class="search-button">Search</button>
+              </mat-icon>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="navbar-search">
+      <input type="text" placeholder="Search">
+      <button class="search-button">Search</button>
+    </div> -->
+  </nav>
+</div>
+<div [ngClass]="{ opacity: mat_drawer }" class="bg" (click)="sidenav()"></div>

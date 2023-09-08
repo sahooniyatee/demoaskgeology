@@ -1,0 +1,30 @@
+<div class="main_container">
+    <h1>OUR COURSES</h1>
+    <div class="course">
+ 
+        <div class="course_card">
+        <mat-card *ngFor="let item of courseArray">
+           
+            <mat-card-header>{{item.name}} 
+           
+           
+        </mat-card-header>
+        <img src='{{item.img}}' />
+        <div
+         style="display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        ">
+        <mat-card-title>{{item.course}}</mat-card-title>
+
+        <!-- <mat-card-subtitle style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">Only On:- {{item.price}} /-</mat-card-subtitle> -->
+        <mat-card-content class="description">{{item.description}}</mat-card-content>
+    </div>
+    <button class="course_btn" (click)="knowmore(item.id)">Know More</button>
+        </mat-card>
+    </div>
+    </div>
+</div>

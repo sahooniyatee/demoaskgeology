@@ -1,0 +1,95 @@
+.main_container{
+    margin-top: 6rem;
+    
+}
+.slider-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .class {
+    flex: 0 0 100%;
+    /* Adjust other styles as needed */
+  }
+  
+  .arrow-container {
+    text-align: center;
+  }
+  
+  .slide-button {
+    font-size: 24px;
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* Adjust other styles as needed */
+  }
+  .container{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 3rem;
+    border-radius: 10px;
+    width: 18rem;
+    height: 20rem ;
+   
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+    background: linear-gradient(to right, #009688, rgb(99, 208, 244)); /* Gradient colors */
+    -webkit-background-clip: text; /* Safari and Chrome */
+    -webkit-text-fill-color: transparent; /* Safari and Chrome */
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-top: 1rem;
+    padding: 15px;
+    font-family: cursive;
+  
+  }
+  .btn{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+  }
+ ::ng-deep{
+
+   .ng-image-slider .ng-image-slider-container .main .next, .ng-image-slider .ng-image-slider-container .main .prev {
+    color: rgb(5 190 251);
+    transform: scale(2.5);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    /* background-color: #fff; */
+    background: none !important;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -16px;
+    outline: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    line-height: 30px;
+    z-index: 8;
+    transition: all .5s ease-in-out;
+    text-align: center;
+   }
+ }
+  @media (max-width:800px) {
+    h1{
+      font-size: 25px;
+    }
+  }

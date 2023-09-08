@@ -1,0 +1,138 @@
+::ng-deep {
+  $successfull: rgb(50, 198, 130);
+  $dangerous: rgb(255, 85, 73);
+  $warning: rgb(238, 191, 49);
+  $information: rgb(38, 192, 211);
+
+  .success {
+    background-color: $successfull !important;
+    color: #fff !important;
+  }
+
+  .danger {
+    background-color: $dangerous !important;
+    color: white !important;
+  }
+
+  .warn {
+    background-color: $warning !important;
+    color: white !important;
+  }
+
+  .info {
+    background-color: $information !important;
+    color: #ffff !important;
+  }
+}
+
+.mainContainer{
+  padding: 3rem;
+  width: auto;
+}
+.container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.form{
+  margin-left: auto;
+  margin-right: auto;
+
+    // width: 50%;
+    .example-form{
+        display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    // padding-left: 5rem;
+    }
+}
+.get_in_touch{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: auto;
+}
+h1{
+    font-size: 45px;
+    font-weight: bold;
+    background: linear-gradient(to right, #009688, rgb(99, 208, 244)); /* Gradient colors */
+    -webkit-background-clip: text; /* Safari and Chrome */
+    -webkit-text-fill-color: transparent; /* Safari and Chrome */
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-top: 1rem;
+    padding: 15px;
+    font-family: cursive;
+
+}
+.btn{
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 25px;
+}
+button.prmColor {
+    // for primary btn color
+    background: rgb(5, 227, 205);
+    color: #fff;
+    border: 2px solid rgb(145, 244, 234);
+    // margin-top: 15px;
+  }
+  button.prmColor:hover {
+    // for primary btn color
+    color: rgb(5, 253, 228);
+  }
+  button.customBTN{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-top: 25px;
+    height: 45px;
+  }
+button.customBTN::after {
+    //for all
+    content: "";
+    background: #f8f9fa;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+  
+  button[class^="slide"]::after {
+    //for all SLIDE
+    transition: all 0.35s;
+  }
+  button[class^="slide"]:hover::after {
+    //for all SLIDE
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+  button.slide_from_right::after {
+    // only for slide_from_left
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
+
+
+  .formSection{
+    display: grid;
+    /* gap: 2rem; */
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 21px;
+  }
+  @media (max-width:800px) {
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .get_in_touch{
+      transform: scale(0.8);
+      width: 100%;
+    }
+  }

@@ -1,0 +1,131 @@
+.main_container{
+    
+    padding: 8rem 5rem 4rem 5rem;
+    width: auto;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    // background-color: antiquewhite;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    background-color: #c5ebe8;
+    flex-wrap: wrap;
+    img{
+      border-radius: 50%;
+    }
+    
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 1;
+    .span{
+        font-size: 35px;
+        font-weight: 500;
+        background: linear-gradient(to right, #009688, rgb(99, 208, 244)); /* Gradient colors */
+        -webkit-background-clip: text; /* Safari and Chrome */
+        -webkit-text-fill-color: transparent; /* Safari and Chrome */
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-top: 1rem;
+        padding: 15px;
+    }
+    img{
+      border-radius: unset;
+    }
+}
+/* GLOBAL STYLES */
+
+  
+  /* DEMO-SPECIFIC STYLES */
+  .text h1 {
+    color: #090909;
+    font-family: monospace;
+    border-right: .15em solid rgb(0, 208, 255); /* The typwriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+      font-weight: bold;
+      font-size: 30px;
+      white-space: inherity;
+      white-space: nowrap;
+      overflow: hidden;
+
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 242, 255) }
+  }
+  .btn{
+    background-color: none;
+    border: 1px solid  #626464;
+    border-radius: 10px;
+    background: none;
+    color: rgb(105, 102, 102);
+    height: 40px;
+    width: 140px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 3rem;
+    cursor: pointer;
+
+  }
+  .social_links{
+    // background-image: url('../../assets/facebook.png');
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .icons{
+    width: 30px;
+
+  }
+  .img{
+    img{
+      transform: scale(0.8);
+    }
+  }
+  @media (max-width:600px) {
+    .text{
+      h1{
+        white-space: inherit;
+        letter-spacing: normal;
+        font-size: 20px;
+      }
+    }
+    .container{
+      display: flex;
+      flex-direction: column-reverse;
+      .img{
+        img{
+          width: 100%;
+        }
+      }
+      
+    }
+  }
+
+  @media (max-width:400px) {
+    .main_container{
+      padding: 10rem 0;
+    }
+   
+  }
