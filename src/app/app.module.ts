@@ -33,7 +33,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { KnowmorwContentComponent } from './cource/knowmorw-content/knowmorw-content.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { NgImageSliderModule } from 'ng-image-slider';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
@@ -73,7 +72,6 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    NgImageSliderModule,
     MatSnackBarModule
 
     // MatCarouselModule.forRoot()
