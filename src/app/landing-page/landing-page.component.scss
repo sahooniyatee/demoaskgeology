@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     line-height: 1;
     .span{
-        font-size: 35px;
+        font-size: 55px;
         font-weight: 500;
         background: linear-gradient(to right, #009688, rgb(99, 208, 244)); /* Gradient colors */
         -webkit-background-clip: text; /* Safari and Chrome */
@@ -35,6 +35,8 @@
         text-fill-color: transparent;
         margin-top: 1rem;
         padding: 15px;
+        font-family: cursive;
+        font-weight: bold;
     }
     img{
       border-radius: unset;
