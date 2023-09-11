@@ -40,6 +40,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     NavBarComponent,
     LandingPageComponent,
     HomeComponent,
+    BlogComponent,
     CourceComponent,
     ContactComponent,
     DemoClassesComponent,
