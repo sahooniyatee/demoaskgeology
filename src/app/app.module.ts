@@ -34,6 +34,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { KnowmorwContentComponent } from './cource/knowmorw-content/knowmorw-content.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+// import { SwiperModule } from 'ngx-swiper-wrapper';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +73,8 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    // SwiperModule
 
     // MatCarouselModule.forRoot()
   ],

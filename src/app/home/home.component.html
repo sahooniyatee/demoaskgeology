@@ -1,4 +1,7 @@
 <!-- <app-nav-bar></app-nav-bar> -->
+<marquee style="margin-top: 6rem;height: 65px;">
+  <small style="font-size: 25px;">here are the latest notifications</small>
+</marquee>
 <div class="mainContainer">
   <div class="container1">
 
@@ -24,7 +27,19 @@
    <div class="container4">
     <app-contact></app-contact>
   </div>
-  <!-- <div class="container5">
+  <div class="container5">
     <app-demo-classes></app-demo-classes>
+  </div>
+  <!-- <div class="container6">
+    <swiper [config]="swiperConfig" >
+      <div *ngFor="let client of clients; let index = index" ngxSwiperSlide>
+        <div class="testimonial">
+          <!-- <img [src]="client.img1" alt="cdcw" /> 
+          <span class="font">{{ client.title }}</span>
+        </div>
+      </div>
+    </swiper>
+    
+    
   </div> -->
 </div>
