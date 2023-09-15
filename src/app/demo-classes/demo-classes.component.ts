@@ -22,38 +22,47 @@ export class DemoClassesComponent {
 
   imageObject = [
     {
+      id:1,
       video: 'https://www.youtube.com/watch?v=wWfMZs-8lwQ&t=5s',
       title: '01- Timescale and Cross reference',
     },
     {
+      id:2,
       video: 'https://www.youtube.com/watch?v=oC33ZCcp1sY',
       title: '02- Atmosphere',
     },
     {
+      id:3,
       video: 'whttps://www.youtube.com/watch?v=Qc1Euw6nwY',
       title: '03- Remote Sensing',
     },
     {
+      id:4,
       video: 'https://www.youtube.com/watch?v=VS2lAAn-JG8',
       title: '04- Crystallography and Minerology',
     },
     {
+      id: 5 ,
       video: 'https://www.youtube.com/watch?v=emJ6_g_-ze8',
       title: '05- Igneous Phase Rule (Binary)',
     },
     {
+      id :6,
       video: 'https://www.youtube.com/watch?v=drydR5oMpl8',
       title: '06- Rock Cycle Introduction',
     },
     {
+      id:7,
       video: 'https://www.youtube.com/watch?v=dM5d08O7jVo&t=8s',
       title: '07- Introduction to Metamorphism',
     },
     {
+      id:8,
       video: 'https://www.youtube.com/watch?v=uymeFAa5Xt4',
       title: '08- Keplers Law of Planetary Motion',
     },
     {
+      id:9,
       video: 'https://www.youtube.com/watch?v=sTvDogBLm5g&t=10s',
       title: '09- Internal Structure of the Earth',
     },
