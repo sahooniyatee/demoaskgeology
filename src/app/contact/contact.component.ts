@@ -31,24 +31,33 @@ export class ContactComponent {
   sendEmail() {
     // const url = 'http://localhost:8000/api/send-email';
     const emailData = {
-      recipient: this.selfSignup.get('emailId')?.value,
+      mail: this.selfSignup.get('emailId')?.value,
       name: this.selfSignup.get('name')?.value,
       mobile: this.selfSignup.get('mobileno')?.value,
       course:this.toppings.value
     }
 
-    this.service.postData(emailData)
-      .subscribe(
-        (res:any) => {
-          this.service.openDialog("Email sent successfully",true,'success')
-          console.log('Email sent successfully',res);
-          // Optionally, you can reset the form fields here
-        },
-        error => {
-          console.error('Error sending email:', error);
-          this.service.openDialog("Error sending email:",true,'danger')
-        }
-      );
+    // this.service.postData(emailData)
+    //   .subscribe(
+    //     (res:any) => {
+    //       this.service.openDialog("Email sent successfully",true,'success')
+    //       console.log('Email sent successfully',res);
+    //     },
+    //     error => {
+    //       console.error('Error sending email:', error);
+    //       this.service.openDialog("Error sending email:",true,'danger')
+    //     }
+    //   );
+
+    ///// whatsapp chat ////////////
+
+    var url ="https://wa.me/918617295228?text=I am from Ask Geology website User"+"%0a"+
+    "Name: "+emailData.name+"%0a"+
+    "Mobile: "+emailData.mobile+"%0a"+
+    "Email: "+emailData.mail+"%0a"+
+    "Course: "+emailData.course+"%0a"
+    ;
+    window.open(url,'_blank')?.focus();
   }
 
 }

@@ -34,7 +34,10 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { KnowmorwContentComponent } from './cource/knowmorw-content/knowmorw-content.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-// import { SwiperModule } from 'ngx-swiper-wrapper';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { StudymaterialComponent } from './studymaterial/studymaterial.component';
+import { PyqComponent } from './pyq/pyq.component';
+import { StudentrivewComponent } from './studentrivew/studentrivew.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +52,9 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     AdminPageComponent,
     AddPostComponent,
     KnowmorwContentComponent,
+    StudymaterialComponent,
+    PyqComponent,
+    StudentrivewComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +80,7 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     MatNativeDateModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatExpansionModule
     // SwiperModule
 
     // MatCarouselModule.forRoot()

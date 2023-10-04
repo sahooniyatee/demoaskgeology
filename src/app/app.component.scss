@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 ::ng-deep {
   $successfull: rgb(50, 198, 130);
   $dangerous: rgb(255, 85, 73);

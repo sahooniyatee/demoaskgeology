@@ -28,14 +28,7 @@
     cursor: pointer;
     /* Adjust other styles as needed */
   }
-  .container{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    padding: 3rem;
-    border-radius: 10px;
-    width: 18rem;
-    height: 20rem ;
-   
-  }
+
   h1{
     display: flex;
     justify-content: center;
@@ -100,10 +93,11 @@
   .container {
     height: 100%;
     width: 100%;
-    padding: 1rem 0;
+    padding: 3rem;
     display: grid;
     place-content: center;
-    
+    margin-bottom: 3rem;
+    background: #c5ebe8;
     .cards {    
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -174,4 +168,13 @@
   }
   .cards:hover > .card:not(:hover) {
     opacity: 0.5;
+  }
+  @media (max-width:600px) {
+    .container{
+      overflow-x: scroll;
+    }
+    .cards{
+      transform: scale(0.7);
+    }
+   
   }

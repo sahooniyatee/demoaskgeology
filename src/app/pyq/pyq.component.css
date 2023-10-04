@@ -1,0 +1,27 @@
+.main_container{
+    margin-top: 6rem;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+    background: linear-gradient(to right, #009688, rgb(99, 208, 244)); /* Gradient colors */
+    -webkit-background-clip: text; /* Safari and Chrome */
+    -webkit-text-fill-color: transparent; /* Safari and Chrome */
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-top: 1rem;
+    padding: 15px;
+    font-family: cursive;
+  
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 3rem;
+    margin-top: 4rem;
+
+  }

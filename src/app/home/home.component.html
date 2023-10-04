@@ -2,7 +2,8 @@
 <marquee style="margin-top: 6rem;height: 65px;">
   <small style="font-size: 25px;">here are the latest notifications</small>
 </marquee>
-<div class="mainContainer">
+<!-- <div class="mainContainer"> -->
+  
   <div class="container1">
 
     <app-landing-page></app-landing-page>
@@ -42,4 +43,21 @@
     
     
   </div> -->
-</div>
+  <div class="container6" id="studentSection">
+    <h1>Our students have to say</h1>
+    <p style="display: flex; justify-content: center;">It was the first batch : It started from August-September to January-February
+
+      We are very much thankful to you for the initiative.</p>
+    <div class="content">
+      <div class="wrapper">
+    <div class="students" *ngFor="let client of clients; let i = index">
+      <mat-card style="background: none;" *ngIf="currentIndex === i">
+        <img mat-card-image [src]="client.img" alt="Photo of a students">
+        <mat-card-title style="padding: 0rem 3rem 3rem;">{{client.title}}</mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+  </div>
+  </div>
+  <app-footer></app-footer>
+<!-- </div> -->
