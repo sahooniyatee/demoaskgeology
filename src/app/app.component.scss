@@ -75,4 +75,11 @@ $backgroundColor:linear-gradient(to right, #009688, rgb(99, 208, 244));
     font-family: cursive;
   
   }
-  
+  ::ng-deep{
+
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+      // margin-top: 10rem;
+      // overflow: scroll !important;
+      // border-radius: 10px;
+    }
+  }

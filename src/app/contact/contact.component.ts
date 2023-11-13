@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +11,7 @@ import { AppService } from '../app.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @ViewChild('consent') consent:TemplateRef<any>;
   selfSignup!:FormGroup;
   toppings = new FormControl('',Validators.required);
 
@@ -26,7 +29,10 @@ export class ContactComponent {
 
   constructor(private http: HttpClient,
     private service:AppService,
-    ) {}
+    private _snackBar: MatSnackBar,
+    private dialog:MatDialog
+    )
+    {}
 
   sendEmail() {
     // const url = 'http://localhost:8000/api/send-email';
@@ -51,12 +57,15 @@ export class ContactComponent {
 
     ///// whatsapp chat ////////////
 
-    var url ="https://wa.me/918617295228?text=I am from Ask Geology website User"+"%0a"+
+    var url ="https://wa.me/916033207601?text=I am from Ask Geology website User"+"%0a"+
     "Name: "+emailData.name+"%0a"+
     "Mobile: "+emailData.mobile+"%0a"+
     "Email: "+emailData.mail+"%0a"+
     "Course: "+emailData.course+"%0a"
     ;
+    alert("Data sent Successfully to Ask Geology Admin");
+    // this.service.openDialog("sent successfully",true,"success");
+    // this.dialog.open(this.consent)
     window.open(url,'_blank')?.focus();
   }
 

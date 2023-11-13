@@ -38,6 +38,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { StudymaterialComponent } from './studymaterial/studymaterial.component';
 import { PyqComponent } from './pyq/pyq.component';
 import { StudentrivewComponent } from './studentrivew/studentrivew.component';
+import { BannerComponent } from './banner/banner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { StudentrivewComponent } from './studentrivew/studentrivew.component';
     StudymaterialComponent,
     PyqComponent,
     StudentrivewComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

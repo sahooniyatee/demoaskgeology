@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  @ViewChild('banner') banner!: TemplateRef<any>;
   currentIndex = 0;
+  constructor(private dialog:MatDialog){
 
+  }
   ngOnInit(): void {
+    // this.banner1()
     this.startSlideshow();
   }
 
-
+  banner1(){
+    this.dialog.open(this.banner,{
+      height:'300px',
+      width:'600px'
+    })
+  }
   clients=[
     {
       title:'Ask Geology has been a game-changer for me. The affordability of their courses combined with the in-depth knowledge imparted by the instructors has been invaluable." - John, a geology enthusiast.',
@@ -34,7 +44,7 @@ export class HomeComponent {
    startSlideshow(): void {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.clients.length;
-    }, 500000); // Switch to the next slide every 3 seconds (3000 milliseconds)
+    }, 5000); // Switch to the next slide every 3 seconds (3000 milliseconds)
   }
 
   //  swiperConfig: SwiperOptions = {

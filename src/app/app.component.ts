@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatDialog } from '@angular/material/dialog';
+import { BannerComponent } from './banner/banner.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+ 
+  constructor(private dialog:MatDialog){
+
+  }
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.dialog.open(BannerComponent,{
+        // height:'400px',
+        // width:'600px',
+        disableClose:true
+      })
+    }, 3000);
+  }
   // title = 'frontend';
   // constructor(private http: HttpClient) { }
   // products: any;
