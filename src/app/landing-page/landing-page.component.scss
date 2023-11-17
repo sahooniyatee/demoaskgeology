@@ -116,6 +116,8 @@
     .container{
       display: flex;
       flex-direction: column-reverse;
+      box-shadow: none;
+      background-color: white;
       .img{
         img{
           width: 100%;
@@ -125,9 +127,4 @@
     }
   }
 
-  @media (max-width:400px) {
-    .main_container{
-      padding: 10rem 0;
-    }
-   
-  }
+ 

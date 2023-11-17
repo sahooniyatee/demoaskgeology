@@ -1,11 +1,116 @@
 .main_container{
+    background-color:rgb(165, 253, 224);
+    // background-image: url('../../assets/wave.svg');
     width: 100%;
 }
 .container{
-    height: 100px;
+   display: flex;
+   padding: 3rem 3rem 0rem 3rem;
+   width: 100%;
+}
+.logo{
     display: flex;
+    text-decoration: none;
+    margin-right: auto;
+    list-style-type: none;
+    gap: 10px;
+    /* font-size: 36px; */
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color:rgb(165, 253, 224);
+
+
+    img{
+        border-radius: 50%;
+        font-size: 20px;
+        width: 50px;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+    font-weight: bold;
+    /* margin-top: auto; */
+    /* margin-bottom: auto; */
+    font-size: 36px;
+    /* background: linear-gradient(to right, #009688, rgb(99, 208, 244)); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    background-clip: text;
+    text-fill-color: transparent;
+    color: #009688;
+    }
+
 }
+.left_content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    gap: 1rem;
+    width: 40%;
+}
+.sub_div1{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    cursor: pointer;
+    mat-icon{
+        color: blue;
+    }
+}
+.paragraph{
+    // display: none;
+}
+// .paragraph.active {
+//     transform: translateY(100%);
+//     opacity: 1;
+//     display: inline-block;
+//     transition-delay: 5s;
+//     transition: all 1s ease-in-out, display 1s 0.5s;
+//     
+//     animation-duration: 10s;
+
+
+//   }
+.paragraph{
+    display: block;
+    transition: all 0.5 ease-in-out;
+    width: fit-content;
+    animation-name: example;
+    margin-left: 3rem;
+    list-style-type: circle;
+}
+@keyframes example {
+    0%   { left:0px; top:0px;}
+    100% {background-color:red; left:0px; top:100px;}
+  }
+  .right_content{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    .imp_para{
+        font-size: 21px;
+        margin-left: 2rem;
+    }
+  }
+  .mainDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .copyright_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 5rem; */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4.5px );
+    -webkit-backdrop-filter: blur( 4.5px );
+    border-radius: 10px;
+    text-align: center;
+    height: 50%;
+    margin-top: 3rem;
+    
+  }

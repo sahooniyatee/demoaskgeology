@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 ::ng-deep {
   $successfull: rgb(50, 198, 130);
   $dangerous: rgb(255, 85, 73);
@@ -71,4 +75,11 @@ $backgroundColor:linear-gradient(to right, #009688, rgb(99, 208, 244));
     font-family: cursive;
   
   }
-  
+  ::ng-deep{
+
+    .mat-mdc-dialog-container .mdc-dialog__surface {
+      // margin-top: 10rem;
+      // overflow: scroll !important;
+      // border-radius: 10px;
+    }
+  }

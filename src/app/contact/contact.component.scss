@@ -24,7 +24,9 @@
     color: #ffff !important;
   }
 }
-
+.disabled{
+  opacity: 0.5;
+}
 .mainContainer{
   padding: 3rem;
   width: auto;
@@ -32,6 +34,7 @@
 .container{
    display: grid;
    grid-template-columns: 1fr 1fr;
+   align-items: center;
 }
 .form{
   margin-left: auto;

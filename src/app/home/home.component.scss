@@ -1,17 +1,43 @@
-marquee{
-  small{
-  background-color: linear-gradient(
+:root {
+  --yellow: #fa8212;
+  --orange: #fe933b;
+  --black: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(253, 158, 238);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+  background: linear-gradient(
     to right,
     #009688,
     rgb(99, 208, 244)
-  );;
+  ); /* Gradient colors */
+  -webkit-background-clip: text; /* Safari and Chrome */
+  -webkit-text-fill-color: transparent; /* Safari and Chrome */
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-top: 1rem;
+  padding: 15px;
+  font-family: cursive;
+}
+.container6 {
+  margin: 3rem;
+}
+marquee {
+  small {
+    background-color: linear-gradient(to right, #009688, rgb(99, 208, 244));
   }
 }
 .mainContainer {
   // backgrowuwidthund-color: #c5ebe8;
-  width:100%;
+  width: 100%;
 }
-.container2{
+.container2 {
   display: flex;
   flex-direction: column;
 }
@@ -131,7 +157,7 @@ h1 {
 //   a:visited {
 //     text-decoration: none;
 //   }
-  
+
 //   a:hover {
 //     color: hotpink;
 //   }
@@ -151,48 +177,76 @@ h1 {
   width: 100%;
   box-sizing: border-box;
   border-radius: 20px;
-  img{
+  img {
     height: 164px;
   }
-  p{
+  p {
     font-size: 40px;
     color: black;
     line-height: 1.5;
+  }
 }
-}
-.playStore{
+.playStore {
   width: 100%;
   box-sizing: border-box;
   display: block;
   margin: auto;
 }
-@media (max-width:350px) {
-  .playstoreDiv{
+@media (max-width: 350px) {
+  .playstoreDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
-@media (max-width:800px) {
-  .playstoreDiv{
-    p{
+@media (max-width: 800px) {
+  .playstoreDiv {
+    p {
       font-size: 25px;
     }
   }
 }
-@media (max-width:400px) {
-  .playstoreDiv{
-    img{
+@media (max-width: 400px) {
+  .playstoreDiv {
+    img {
       width: 100%;
     }
-    p{
+    p {
       font-size: 20px;
       display: flex;
       flex-wrap: wrap;
     }
   }
 }
-.container4{
+.container4 {
   width: 100%;
 }
+
+///////////////////// testimonial css ////////////
+
+
+.students {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 50%;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px;
+  img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+

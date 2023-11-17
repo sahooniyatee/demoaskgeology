@@ -1,5 +1,85 @@
+
 <div class="main_container">
     <div class="container">
-        <p>@Support: AskGeology@gmail.com</p>
+        <div class="left_content">
+            <div class="logo">
+                <img
+                  src="../../assets/aglogo.png"
+                  alt="logo"
+                  routerLink="/home"
+                />
+                <a routerLink="/home"> AskGeology</a>
+              </div>
+              <li>Ready to embark on an enriching journey into the world of geology? Join Ask Geology today and unlock the knowledge and expertise that will propel your career forward. Explore our range of affordable courses, comprehensive test series, and meticulously crafted notes to get started. With Ask Geology, geology education is within everyone's reach.</li>
+        </div>
+        <div class="right_content">
+            <div>
+            <p class="imp_para">Important Information</p>
+            <ul >
+                <div class="mainDiv" [ngSwitch]="divValue">
+                <div class="div1" >
+                    <div class="sub_div1" >
+                        <mat-icon (click)="divValue=1" *ngIf="divValue==0 || divValue==2 || divValue==3 || divValue==4" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_right">
+                        </mat-icon>
+                        <mat-icon (click)="divValue=0" *ngIf="divValue==1" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_down">
+                        </mat-icon>
+                        <li (click)="divValue=1" *ngIf="divValue==0 || divValue==2 || divValue==3 || divValue==4">Company's Journey</li>
+                        <li (click)="divValue=0" *ngIf="divValue==1">Company's Journey</li>
+                    </div>
+                    <li class="paragraph" *ngSwitchCase="1">Welcome to Ask Geology, your one-stop destination for affordable and comprehensive geology courses. Established with a firm commitment to making education accessible to all, Ask Geology has emerged as a leading educational platform in the field of geology. From humble beginnings, our journey has been nothing short of remarkable.</li>
+                </div>
+                <div class="div1">
+                    <div class="sub_div1" >
+                        <mat-icon (click)="divValue=2" *ngIf="divValue==0 || divValue==1 || divValue==3 || divValue==4" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_right">
+                        </mat-icon>
+                        <mat-icon (click)="divValue=0" *ngIf="divValue==2" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_down">
+                        </mat-icon>
+                        <li (click)="divValue=2" *ngIf="divValue==0 || divValue==1 || divValue==3 || divValue==4">Purpose and Goals</li>
+                        <li (click)="divValue=0" *ngIf="divValue==2">Purpose and Goals</li>
+                    </div>
+                  
+                    <li class="paragraph" *ngSwitchCase="2">At Ask Geology, our purpose is simple yet powerful - to provide top-notch geology courses at an affordable price. We understand that the pursuit of education should not be restricted by financial barriers; hence, we have curated a range of courses tailored to meet the needs of students and professionals alike. Through our courses, we aim to foster a deep love and understanding for the Earth's processes, igniting curiosity and inspiring the geologists of tomorrow.</li>
+                </div>
+                <div class="div1">
+                    <div class="sub_div1" >
+                        <mat-icon (click)="divValue=3" *ngIf="divValue==0 || divValue==1 || divValue==2 || divValue==4" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_right">
+                        </mat-icon>
+                        <mat-icon (click)="divValue=0" *ngIf="divValue==3" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_down">
+                        </mat-icon>
+                        <li (click)="divValue=3" *ngIf="divValue==0 || divValue==1 || divValue==2 || divValue==4">Achievements</li>
+                        <li (click)="divValue=0" *ngIf="divValue==3">Achievements</li>
+                    </div>
+                  
+                    <li class="paragraph" *ngSwitchCase="3">Throughout our journey, Ask Geology has been recognized for its excellence in education and dedication to its students. Some of our notable achievements include:
+
+                        Achieving a remarkable pass percentage in various national-level entrance exams.
+                        
+                        Being featured in prominent educational publications for our exceptional course curriculum.
+                        
+                        Receiving accolades and appreciation from industry experts and geology enthusiasts.
+                        
+                        These achievements are a testament to our unwavering commitment to providing affordable, high-quality geology education that makes a real difference in the lives of our students.</li>
+                </div>
+                <div class="div1">
+                    <div class="sub_div1" >
+                        <mat-icon (click)="divValue=4" *ngIf="divValue==0 || divValue==2 || divValue==3 || divValue==1" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_right">
+                        </mat-icon>
+                        <mat-icon (click)="divValue=0" *ngIf="divValue==4" aria-hidden="false" aria-label="Example home icon" fontIcon="keyboard_arrow_down">
+                        </mat-icon>
+                        <li (click)="divValue=4" *ngIf="divValue==0 || divValue==2 || divValue==3 || divValue==1">Call to Action</li>
+                        <li (click)="divValue=0" *ngIf="divValue==4">Call to Action</li>
+                    </div>
+                  
+                    <li class="paragraph" *ngSwitchCase="4" style="list-style-type: circle;">Ready to embark on an enriching journey into the world of geology? Join Ask Geology today and unlock the knowledge and expertise that will propel your career forward. Explore our range of affordable courses, comprehensive test series, and meticulously crafted notes to get started. With Ask Geology, geology education is within everyone's reach.
+
+                        Visit our website Ask Geology to explore our course offerings and begin your transformative educational experience.</li>
+                </div>
+            </div>
+            </ul>
+        </div>
+        </div>
+    </div>
+    <div class="copyright_section">
+        <p >&copy; 2023 All Rights Reserved | Designed by <b><a routerLink="/home" style="text-decoration: none; color: blue;">Ask Geology</a></b></p>
     </div>
 </div>

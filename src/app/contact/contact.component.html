@@ -16,14 +16,10 @@
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput placeholder="Enter your Email" type="email" formControlName="emailId">
-                <mat-error *ngIf="selfSignup.get('emailId')?.touched">
+                <mat-error *ngIf="selfSignup.get('emailId')?.touched || selfSignup.get('emailId')?.hasError('requied')">
                   
                 <span style="color: red;">Email must be requied 📧</span>
                 </mat-error>
-                <mat-error *ngIf="selfSignup.get('emailId')?.hasError('requied')">
-                  
-                  <span style="color: red;">Email must be requied 📧</span>
-                  </mat-error>
                   <mat-error *ngIf="selfSignup.get('emailId')?.hasError('pattern')">
                     <span style="color: red;">Eamil should a proper pattern</span>
                   </mat-error>
@@ -64,3 +60,6 @@
         
     </div>
 </div>
+<!-- <ng-template #consent>
+  <p>hi</p>
+</ng-template> -->

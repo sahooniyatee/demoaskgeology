@@ -3,7 +3,7 @@
   <nav class="navbar">
     <div class="logo">
       <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPrmOHGfbc3l5zvI_DF7ljH7wwDTlK_KgWsBWqlRmjY84SRs2KnM-3_WWdkPEXZJRMBNs&usqp=CAU"
+        src="../../assets/aglogo.png"
         alt="logo"
         routerLink="/home"
       />
@@ -15,7 +15,6 @@
           aria-hidden="false"
           aria-label="Example home icon"
           fontIcon="menu"
-          matTooltip="Sections"
         ></mat-icon>
       </div>
 
@@ -26,6 +25,15 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/course">Our Courses</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="scrollToTop()" style="cursor: pointer;">AG_Success</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/studymaterial">Study Material</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/PYQ">PYQ Papers</a>
+        </li>
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/blog">Blog</a>
         </li> -->
@@ -34,14 +42,14 @@
         </li>
         <li class="nav-item">
           <div class="search-container navbar-search">
-            <input type="text" class="search-input" placeholder="Search" />
+            <input type="text" class="search-input" placeholder="Search" [ngClass]="{ search: search }"/>
             <mat-icon
               aria-hidden="false"
               aria-label="Example home icon"
               fontIcon="search"
               (click)="showSearchInput()"
               style="cursor: pointer"
-              [ngClass]="{ search: search }"
+              
             >
               <button class="search-button">Search</button>
             </mat-icon>
@@ -58,21 +66,30 @@
             <a class="nav-link" routerLink="/course">Our Courses</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/blog">Blog</a>
+            <a class="nav-link" style="cursor: pointer;">AG_Success</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/studymaterial">Study Material</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/PYQ">PYQ Papers</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/blog">Blog</a>
+          </li> -->
           <li class="nav-item">
             <a class="contact-link" routerLink="/contact">Contact Us</a>
           </li>
           <li class="nav-item">
             <div class="search-container navbar-search">
-              <input type="text" class="search-input" placeholder="Search" />
+              <input type="text" class="search-input" placeholder="Search" [ngClass]="{ search: search }"/>
               <mat-icon
                 aria-hidden="false"
                 aria-label="Example home icon"
                 fontIcon="search"
                 (click)="showSearchInput()"
                 style="cursor: pointer"
-                [ngClass]="{ search: search }"
+                
               >
                 <button class="search-button">Search</button>
               </mat-icon>

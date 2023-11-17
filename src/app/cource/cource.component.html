@@ -4,20 +4,14 @@
  
         <div class="course_card">
         <mat-card *ngFor="let item of courseArray">
-           
-            <mat-card-header>{{item.name}} 
-           
-           
+           <mat-card-header>{{item.name}} 
         </mat-card-header>
         <img src='{{item.img}}' />
-        <div
-         style="display: flex;
+        <div style="display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        
-        ">
+        text-align: center;">
         <mat-card-title>{{item.course}}</mat-card-title>
 
         <!-- <mat-card-subtitle style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">Only On:- {{item.price}} /-</mat-card-subtitle> -->
