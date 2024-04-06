@@ -34,9 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/PYQ">PYQ Papers</a>
         </li>
-        <!-- <li class="nav-item">
+        <li class="nav-item" *ngIf="false">
           <a class="nav-link" routerLink="/blog">Blog</a>
-        </li> -->
+        </li>
         <li class="nav-item">
           <a class="contact-link" routerLink="/contact">Contact Us</a>
         </li>
@@ -49,7 +49,7 @@
               fontIcon="search"
               (click)="showSearchInput()"
               style="cursor: pointer"
-              
+
             >
               <button class="search-button">Search</button>
             </mat-icon>
@@ -89,7 +89,7 @@
                 fontIcon="search"
                 (click)="showSearchInput()"
                 style="cursor: pointer"
-                
+
               >
                 <button class="search-button">Search</button>
               </mat-icon>

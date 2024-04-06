@@ -1,5 +1,6 @@
 import { Component, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { BannerComponent } from '../banner/banner.component';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +15,13 @@ export class HomeComponent {
   ngOnInit(): void {
     // this.banner1()
     this.startSlideshow();
+       setTimeout(() => {
+      this.dialog.open(BannerComponent,{
+        // height:'400px',
+        // width:'600px',
+        disableClose:true
+      })
+    }, 3000);
   }
 
   banner1(){

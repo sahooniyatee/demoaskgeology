@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatDialog } from '@angular/material/dialog';
-import { BannerComponent } from './banner/banner.component';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +13,7 @@ export class AppComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    setTimeout(() => {
-      this.dialog.open(BannerComponent,{
-        // height:'400px',
-        // width:'600px',
-        disableClose:true
-      })
-    }, 3000);
+   
   }
   // title = 'frontend';
   // constructor(private http: HttpClient) { }

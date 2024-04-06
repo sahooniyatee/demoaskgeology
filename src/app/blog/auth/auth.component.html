@@ -1,0 +1,193 @@
+<mat-icon><span class="material-symbols-outlined close_icon">close</span></mat-icon>
+<div class="main_container">
+  
+    <div class="left_container">
+        <img src="../../assets/Mobile login.gif" alt="login image">
+    </div>
+    <div class="right_container">
+        <h2>Welcome To AskGeology</h2><br>
+        <h3>JOIN US !! -- It's Free</h3>
+        <!-- <app-login></app-login> -->
+        <!-- login -->
+        <div class="">
+    
+            <div class="right_container" [ngSwitch]="cardName">
+                
+                <div class="formContainer" *ngSwitchCase="'loginPage'">
+                    <form class="formFields" [formGroup]="login" (submit)="loginUser()" #formDirective="ngForm">
+                        <div class="fields">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Email ID</mat-label>
+                                <input type="email" matInput placeholder="Enter email id" formControlName="email" />
+                                <mat-icon matSuffix>email</mat-icon>
+                                <mat-error *ngIf="
+                              login.get('email')?.hasError('required') &&
+                              login.get('email')?.touched
+                            ">This field is Required.</mat-error>
+                                <mat-error *ngIf="login.get('email')?.hasError('pattern')">InValid Email ID.</mat-error>
+        
+                                <!-- <button
+                              type="button"
+                              mat-raised-button
+                              [disabled]="login.get('email')?.status==='VALID'? false: true"
+                              [ngClass]="login.get('email')?.status==='VALID'? '': 'disableButton'"
+                              matSuffix
+                              class="suffix_button"
+                              (click)="openDialog('email')"
+                              *ngIf="emailProcess === 1"
+                            >
+                              Verify
+                            </button> -->
+                                <!-- <mat-icon
+                              matSuffix
+                              *ngIf="emailProcess === 2"
+                              style="color: rgb(4, 180, 4); font-weight: 900"
+                              >check_circle</mat-icon
+                            > -->
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input
+                                  [type]="passwordType"
+                                  matInput
+                                  minlength="6"
+                                  maxlength="30"
+                                  placeholder="Enter Password"
+                                  formControlName="password"
+                                />
+                                <mat-icon matSuffix (click)="changePassType('password')">{{
+                                  showpass ? "visibility_off" : "visibility"
+                                }}</mat-icon>
+                                <mat-error
+                                  *ngIf="
+                                    login.get('password')?.hasError('required') &&
+                                    login.get('password')?.touched
+                                  "
+                                  >This field is Required.</mat-error
+                                >
+                                <mat-error *ngIf="login.get('password')?.hasError('minLength')"
+                                  >Password must be greater than or equal to 6 characters.</mat-error
+                                >
+                                <mat-error *ngIf="login.get('password')?.hasError('maxLength')"
+                                  >Password must be less than or equal to 30 characters.</mat-error
+                                >
+                                <mat-error *ngIf="login.get('password')?.hasError('pattern')"
+                                  >Password should contain alphabets, numbers and special characters.
+                                </mat-error>
+                              </mat-form-field>
+                        </div>
+                        <div class="forgot_pass">
+                            <a href="#">Forgot Password</a>
+            
+                        </div>
+                        <div class="action">
+                            <button type="submit" mat-raised-button [disabled]="login.invalid ? true : false"
+                                [ngClass]="login.invalid ? 'disableSubmitButton' : ''">
+                                Submit
+                            </button>
+                        </div>
+                        <div class="register">
+                            <h4 (click)="register()">Dont't have any account then <span>Register</span></h4>
+                        </div>
+                      
+                    </form>
+                    
+                </div>
+                <div class="formContainer" *ngSwitchCase="'registerPage'">
+                    <form class="formFields" [formGroup]="registerForm" (submit)="RegisterUser()" #formDirective="ngForm">
+                        <div class="fields">
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input type="text" matInput placeholder="Enter your full name" formControlName="name">
+                                <mat-error *ngIf="registerForm.get('name')?.hasError('required') && registerForm.get('name')?.touched"
+                                  >Name Must be Requried</mat-error
+                                >
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Email ID</mat-label>
+                                <input type="email" matInput placeholder="Enter email id" formControlName="email" />
+                                <!-- <mat-icon matSuffix>email</mat-icon> -->
+                                <mat-error *ngIf="
+                              registerForm.get('email')?.hasError('required') &&
+                              registerForm.get('email')?.touched
+                            ">This field is Required.</mat-error>
+                                <mat-error *ngIf="registerForm.get('email')?.hasError('pattern')">InValid Email ID.</mat-error>
+        
+                                <!-- <button
+                              type="button"
+                              mat-raised-button
+                              [disabled]="login.get('email')?.status==='VALID'? false: true"
+                              [ngClass]="login.get('email')?.status==='VALID'? '': 'disableButton'"
+                              matSuffix
+                              class="suffix_button"
+                              (click)="openDialog('email')"
+                              *ngIf="emailProcess === 1"
+                            >
+                              Verify
+                            </button> -->
+                                <!-- <mat-icon
+                              matSuffix
+                              *ngIf="emailProcess === 2"
+                              style="color: rgb(4, 180, 4); font-weight: 900"
+                              >check_circle</mat-icon
+                            > -->
+                            </mat-form-field>
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input
+                                  [type]="passwordType"
+                                  matInput
+                                  minlength="6"
+                                  maxlength="30"
+                                  placeholder="Enter Password"
+                                  formControlName="password"
+                                />
+                                <mat-icon matSuffix (click)="changePassType('password')">{{
+                                  showpass ? "visibility_off" : "visibility"
+                                }}</mat-icon>
+                                <mat-error
+                                  *ngIf="
+                                    registerForm.get('password')?.hasError('required') &&
+                                    registerForm.get('password')?.touched
+                                  "
+                                  >This field is Required.</mat-error
+                                >
+                                <mat-error *ngIf="registerForm.get('password')?.hasError('minLength')"
+                                  >Password must be greater than or equal to 6 characters.</mat-error
+                                >
+                                <mat-error *ngIf="registerForm.get('password')?.hasError('maxLength')"
+                                  >Password must be less than or equal to 30 characters.</mat-error
+                                >
+                                <mat-error *ngIf="registerForm.get('password')?.hasError('pattern')"
+                                  >Password should contain alphabets, numbers and special characters.
+                                </mat-error>
+                              </mat-form-field>
+                            <mat-form-field class="example-full-width" appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input type="text" matInput placeholder="Enter your Number" formControlName="number" >
+                                <mat-error *ngIf="registerForm.get('number')?.hasError('required') && registerForm.get('number')?.touched"
+                                >Number Must be Requried</mat-error
+                              >
+                            </mat-form-field>
+                        </div>
+                      
+                        <div class="action">
+                            <button class="slide_from_right customBTN btn prmColor" mat-raised-button type="submit" [disabled]="registerForm.invalid ? true : false"
+                                [ngClass]="registerForm.invalid ? 'disableSubmitButton' : ''">
+                                Submit
+                            </button>
+                        </div>
+                        <div class="login">
+                            <h4 (click)="loginCard()">Already have any account then <span >Login</span></h4>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- register -->
+    </div>
+</div>
+<ngx-ui-loader></ngx-ui-loader>
+<!-- <router-outlet></router-outlet> -->

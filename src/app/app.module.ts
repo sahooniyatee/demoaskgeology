@@ -11,7 +11,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HomeComponent } from './home/home.component';
-import { BlogComponent } from './blog/blog.component';
 import { CourceComponent } from './cource/cource.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatInputModule } from '@angular/material/input';
@@ -24,9 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
-import { AdminPageComponent } from './blog/admin-page/admin-page.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import { AddPostComponent } from './blog/admin-page/add-post/add-post.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -39,19 +36,20 @@ import { StudymaterialComponent } from './studymaterial/studymaterial.component'
 import { PyqComponent } from './pyq/pyq.component';
 import { StudentrivewComponent } from './studentrivew/studentrivew.component';
 import { BannerComponent } from './banner/banner.component';
+import { BlogModule } from './blog/blog.module';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     LandingPageComponent,
     HomeComponent,
-    BlogComponent,
     CourceComponent,
     ContactComponent,
     DemoClassesComponent,
     FooterComponent,
-    AdminPageComponent,
-    AddPostComponent,
+    // AdminPageComponent,
+    // AddPostComponent,
     KnowmorwContentComponent,
     StudymaterialComponent,
     PyqComponent,
@@ -82,7 +80,9 @@ import { BannerComponent } from './banner/banner.component';
     MatNativeDateModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    BlogModule,
+    NgxUiLoaderModule
     // SwiperModule
 
     // MatCarouselModule.forRoot()

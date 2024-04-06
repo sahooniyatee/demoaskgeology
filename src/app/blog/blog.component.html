@@ -29,8 +29,11 @@
     </div>
 
     <hr />
-    <div class="content">
+    <div class="content" *ngIf="admin">
       <app-admin-page></app-admin-page>
+    </div>
+    <div class="content" *ngIf="user">
+      <app-user-page></app-user-page>
     </div>
   </div>
 </div>

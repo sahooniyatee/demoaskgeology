@@ -11,6 +11,7 @@ import {
   providedIn: 'root'
 })
 export class AppService {
+  registrationStatus: BehaviorSubject<string> = new BehaviorSubject<string>('registerNotDone');
   private baseUrl = 'http://localhost:8000'; 
 
   constructor(private http: HttpClient,private SnackBar: MatSnackBar) { }
@@ -32,11 +33,11 @@ export class AppService {
   ////////////// Mat_SnackBar_Implitation ///////////////
   horizontalPosition: MatSnackBarHorizontalPosition = 'right';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
-  openDialog(message: any, timeBoolean: boolean, className: string = 'mat-primary') {
+  openDialog(message: any, timeBoolean: boolean, className: string) {
     let snackConfig: any = {
       horizontalPosition: 'end',
       verticalPosition: 'top',
-      panelClass: ['mat-toolbar', className],
+      panelClass: [className],
     }
     let duration = !timeBoolean ? 'Done' : '✖';
     timeBoolean ? snackConfig.duration = 3500 : '';

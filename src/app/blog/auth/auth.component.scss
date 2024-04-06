@@ -1,0 +1,140 @@
+// ::ng-deep
+// .mat-mdc-dialog-container .mdc-dialog__surface {
+//     border-radius: var(--mdc-dialog-container-shape, var(--mdc-shape-medium, 4px));
+//     overflow: hidden;
+//     margin-top: 6rem;
+::ng-deep {
+    .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+        background:none !important;
+        font-weight: 600;
+    }
+    $successfull: rgb(50, 198, 130);
+    $dangerous: rgb(255, 85, 73);
+    $warning: rgb(238, 191, 49);
+    $information: rgb(38, 192, 211);
+  
+    .success {
+      background-color: $successfull !important;
+      color: #fff !important;
+      
+    }
+  
+    .danger {
+      background-color: $dangerous !important;
+      color: white !important;
+    }
+  
+    .warn {
+      background-color: $warning !important;
+      color: white !important;
+    }
+  
+    .info {
+      background-color: $information !important;
+      color: #ffff !important;
+    }
+  }
+  .close_icon{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+.main_container {
+    padding: 0 0 3rem 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.left_container{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.right_container {
+    width: 60%;
+
+    /* display: flex;
+        flex-direction: column;
+        line-height: 0px; */
+    h2 {
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 30px;
+        background: linear-gradient(to right, #009688, rgb(99, 208, 244));
+        /* Gradient colors */
+        -webkit-background-clip: text;
+        /* Safari and Chrome */
+        -webkit-text-fill-color: transparent;
+        /* Safari and Chrome */
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    .fields {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .register,
+    .login {
+        h4{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        span {
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+        }
+    }
+    .forgot_pass{
+        display: flex;
+        justify-content: end;
+    }
+    .action{
+        button{
+            background-color: #009688;
+            margin-top: 5px;
+            width: 100%;
+        }
+    }
+}
+
+.right_container h3 {
+    font-size: 20px;
+}
+
+.right_container p {
+    font-size: 20px;
+}
+
+.left_container {
+    width: 40%;
+}
+
+.left_container img {
+    width: 100%;
+    margin-right: 2rem;
+}
+.disableButton {
+    background-color: #009688 !important;
+    cursor: not-allowed !important;
+    bottom: 7px !important;
+    box-shadow: none !important;
+    color: white !important;
+    height: 33px !important;
+    font-size: 14px !important;
+  }
+  .disableSubmitButton {
+    background-color: #78b4ae !important;
+    cursor: not-allowed !important;
+    color: white !important;
+  }
