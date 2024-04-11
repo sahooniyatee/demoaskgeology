@@ -2,7 +2,14 @@
   padding: 3rem;
   width: auto;
 }
+::ng-deep{
+
+  .mat-mdc-dialog-container{
+    margin-top: 2.5rem !important;
+  }
+}
 .course{
+
 
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -195,4 +202,5 @@ img{
 
   color: #414141;
 
-} 
+}
+
